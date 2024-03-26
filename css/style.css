@@ -460,7 +460,7 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 30px;
   }
 }
-.timeline .timeline-heading > div h3 {
+.timeline .timeline-heading > div h2 {
   display: inline-block;
   padding: 7px 15px;
   font-size: 18px;
@@ -584,12 +584,44 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 0;
 }
 
-.company {
+.company-info-left {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.company-info-right {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.company-info-left h3, .company-info-right h3 {
+  margin-bottom: 0;
+}
+
+.custom-icon {
+  width: 60px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.position {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(56, 56, 56);
+}
+
+.date {
   display: block;
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: normal;
-  color: #bfbfbf;
+  color: rgb(131, 131, 131);
 }
 
 .timeline-body > p,
