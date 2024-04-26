@@ -103,6 +103,26 @@
 	
 	};
 
+	var scrollArrow = function() {
+		$('.js-scroll-down').on('click', function(event) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(window).scrollTop() + $(window).height()
+			}, 500, 'easeInOutExpo');
+			return false;
+		});
+	
+		$(window).scroll(function() {
+			var $win = $(window);
+			var maxHeight = $(document).height() - $win.height();
+			if ($win.scrollTop() >= maxHeight) {
+				$('.js-scroll-down').fadeOut();
+			} else {
+				$('.js-scroll-down').fadeIn();
+			}
+		});
+	};
+
 	var pieChart = function() {
 		$('.chart').easyPieChart({
 			scaleColor: false,
@@ -137,7 +157,8 @@
 	
 	$(function(){
 		contentWayPoint();
-		goToTop();
+		//goToTop();
+		scrollArrow();
 		loaderPage();
 		fullHeight();
 		parallax();
